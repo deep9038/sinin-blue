@@ -1,0 +1,24 @@
+.lts-container{
+    position: relative;
+    height:200px;
+    z-index: -1;
+    margin-bottom: 1rem;
+}
+.lts-card {
+    height: inherit;
+    border-radius: 2px;
+   
+}
+.lts-card img{
+    position: absolute;
+    height: inherit;
+}
+.lts-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 2rem;
+}
+.card-img-top{
+    border-radius: 5px;
+}
+

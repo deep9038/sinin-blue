@@ -1,0 +1,99 @@
+.contact-page{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 2rem;
+}
+.contect-but{
+    margin: 1rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    border-radius: 10px;
+}
+.abusimg{
+    width: auto;
+    height: 195px;
+    margin: 2rem;
+    margin-top: 5rem;
+    margin-left: 0;
+}
+.gif{
+    height: inherit;
+}
+.contectgif{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.form input{
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    margin: 0;
+    margin: 0.5rem 0;
+    width: 70%;
+    background-color: rgb(197, 197, 197);
+}
+#contact{
+    width: 400px;
+    font-size: 80px;
+    margin: 0 2rem;
+}
+input::placeholder{
+    font-Family: 'Rubik' 
+}
+textarea{
+    width: 70%;
+}
+textarea::placeholder{
+    font-Family: 'Rubik' 
+}
+.btn-fo{
+    width: 20%;
+    margin-top: 10px;
+}
+.careers h5 , .about h5{
+    margin-top: 2rem;
+}
+.contact-page h2{
+    font-size: 60px;
+    
+}
+#contact{
+    text-align: center;
+}
+@media only screen and (max-width: 1000px){
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+     
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-page h2{
+        font-size: 50px;
+        text-align: center;
+        margin-right:1rem;
+            
+    }
+    #contact{
+        margin: auto auto;
+    }
+}
+@media only screen and (max-width: 400px){
+    #contact{
+        margin: 1rem auto ;
+        font-size: 50px;
+        width: inherit;
+    }
+}
