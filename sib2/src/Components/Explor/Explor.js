@@ -1,5 +1,5 @@
 import React from "react";
-import Surchbar from "../Surchbar";
+// import Surchbar from "../Surchbar";
 import Excard from "./Excard";
 import { useState } from "react";
 import Modal from "../Home/HomeComponant/Modal";
@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import Logimg from "../Home/HomeComponant/Logimg";
 // import Bacimg from "../Home/HomeComponant/Bacimg";
 const Explor = () => {
-  const [quary,setQuary]=useState()
+  // const [quary,setQuary]=useState()
   const [openmod, setOpenmod] = useState(false);
   const [opencontribut,setContribut]=useState(false)
   return (
@@ -26,11 +26,11 @@ const Explor = () => {
         Here you can find every category
         </p>
         </div>
-        <Surchbar  setquary={setQuary} Quary={quary}/>
+        {/* <Surchbar  setquary={setQuary} Quary={quary}/> */}
         <br />
         <br />
         <br />
-        <Excard Quary={quary}/>
+        <Excard />
         <div className="st-brand">
           <div className="s-brand ">
             <h3>Our Enterprise Solutions Meet Your Brand &amp; Budget</h3>
@@ -46,7 +46,7 @@ const Explor = () => {
         <div className="container-fluid lt-pan">
        
           <Ltsdow/>
-          <button className="btn lt-btn">Explore more</button>
+         
         </div> 
       </div>
       <Footer/>

@@ -4,7 +4,6 @@ import "./Surchbar.css";
 const Surchbar = (props) => {
   const [catnam,setCatnam]=useState()
   
-  
   useEffect(() => {
         props.setquary(catnam)
   },[catnam])

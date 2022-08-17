@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Bebas+Neue&family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Bebas+Neue&family=Montserrat:wght@100&family=Poppins:ital,wght@1,200&display=swap');
 .explor{
     display: flex;
     flex-direction: column;
@@ -19,7 +19,8 @@
     text-align: center;
     margin-bottom: 2rem;
     font-family: 'Alumni Sans Pinstripe', sans-serif;
-    color: #878481ad;
+    color: #878481;
+    font-size: 50px;
 }
 .explor h1{
     font-size: 5rem;
@@ -37,4 +38,8 @@
 .it-btn:hover{
     color: wheat;
     background-color: aqua;
+}
+.lt h1{
+    margin: 3rem;
+    font-size: 50px;
 }
