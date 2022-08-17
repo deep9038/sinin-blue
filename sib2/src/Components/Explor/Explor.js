@@ -9,23 +9,21 @@ import './Explor.css'
 import Contribute from "../Contribute";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import Bacimg from "../Home/HomeComponant/Bacimg";
+import Logimg from "../Home/HomeComponant/Logimg";
+// import Bacimg from "../Home/HomeComponant/Bacimg";
 const Explor = () => {
   const [quary,setQuary]=useState()
   const [openmod, setOpenmod] = useState(false);
   const [opencontribut,setContribut]=useState(false)
   return (
     <div>
-      <div><Bacimg/></div>
+      <div><Logimg img="https://images.unsplash.com/photo-1660659236367-710aa4ae7e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"/></div>
       <Navbar op={setOpenmod} conset={setContribut} />
       <div >
         <div className="explor">
         <h1>COLLECTIONS</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-          similique quam, quidem, consequuntur, id architecto suscipit at
-          delectus dicta voluptas ut illum animi enim et! Laboriosam optio saepe
-          nisi vero.
+        Here you can find every category
         </p>
         </div>
         <Surchbar  setquary={setQuary} Quary={quary}/>

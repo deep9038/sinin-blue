@@ -6,7 +6,8 @@ import Galdata from "./Galdata";
 const getFilter=(a,b)=>{
   if(!a){
     return b
-  }else{
+  }
+  else{
     return b.filter((item)=>item.imgname.includes(a))
   }
   

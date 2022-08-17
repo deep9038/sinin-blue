@@ -27,8 +27,8 @@ const Surchbar = (props) => {
               <p>{catnam? catnam:"CATEGORY"}</p>
             </button>
             <div className="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-              <div onClick={()=>setCatnam("3D")}>
-                <p className="dropdown-item" >3D</p>
+              <div onClick={()=>setCatnam("All")}>
+                <p className="dropdown-item" >All</p>
               </div>
               <div onClick={()=>setCatnam("ARTWARK")}>
                 <p className="dropdown-item">ARTWARK</p>

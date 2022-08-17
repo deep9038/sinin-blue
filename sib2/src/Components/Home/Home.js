@@ -38,7 +38,7 @@ function Home() {
           quary.length>0 ? (
             <>
               <Slide Quary={quary} />
-              <Galary />
+              <Galary  Quary={quary}/>
             </>
           ) : (
             <Slide  Quary={quary} />
