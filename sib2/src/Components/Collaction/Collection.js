@@ -29,12 +29,12 @@ const Collection = () => {
   return (
     <>
     <div>
-      <div><Bacimg/></div>
+      <div><Bacimg img="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"/></div>
       <Navbar op={setOpenmod}   conset={setContribut} />
       <div className="container exppool d-flex justify-content-center">
         <img
           src="https://photos.shineinblue.com/wp-content/uploads/2022/05/explore-word-made-outdoor-wilderness-260nw-1230559474-removebg-preview-1.png"
-          className="explor "
+          // className="explor "
           alt=""
         />
       </div>
