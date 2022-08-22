@@ -50,7 +50,7 @@
   padding-top: 120%;
 }
 .tl{
-  background-color: #aca8a1ce;
+  background-color: #ffffffbb;
   /* overflow-y: scroll;*/ 
   display: flex;
   flex-direction: column;
@@ -59,4 +59,9 @@
   width: inherit;
   border-radius: 10px;
 }
-
+.infinite-scroll-component {
+  overflow: hidden !important;
+}
+.infinite-scroll-component__outerdiv{
+  width: 100%;
+}

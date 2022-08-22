@@ -35,7 +35,7 @@ const Uprnav = (props) => {
           <div className="cintainer nav-manu uper-nav-manu">
             <ul className="navbar-nav m-auto ">
               <li className="nav-link">
-                <Link to="/Explor">Home</Link >
+                <Link to="/Explor">Collection</Link >
               </li>
               <li className="nav-link">
                 <Link to="/Collection">Explor</Link >

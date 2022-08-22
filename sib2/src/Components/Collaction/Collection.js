@@ -37,6 +37,7 @@ const Collection = () => {
           // className="explor "
           alt=""
         />
+        <p>You may link some photos from heare </p>
       </div>
       <Surchbar  setquary={setQuary} Quary={quary} />
       <Galary Quary={quary}/>

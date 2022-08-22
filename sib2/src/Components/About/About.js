@@ -1,31 +1,64 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Modal from "../Home/HomeComponant/Modal";
 import Navbar from "../Home/HomeComponant/Navbar";
 import "./About.css"
 import Contribute from "../Contribute";
 // import aboutus from '../sib2 frametmt/aboutus.png'
-import Vanders from "../Vander/Vanders";
+// import Vanders from "../Vander/Vanders";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Bacimg from "../Home/HomeComponant/Bacimg";
-import Aboutimg from '../sib2 frametmt/About-us-not-actualy-as-but-ass.gif'
+// import Aboutimg from '../sib2 frametmt/About-us-not-actualy-as-but-ass.gif'
+import axios from "axios";
+
+
+
+
 const About = () => {
+
   const [openmod, setOpenmod] = useState(false);
   const [opencontribut,setContribut]=useState(false)
+  const [aboutData,setAboutData]=useState()
+  const imgabout=null
+useEffect(()=>{
+    axios
+    .get("http://192.168.29.146:3000/api/photoAboutContent_api")
+    .then(res=>{
+      setAboutData(res.data)
+    
+    // console.log(res.data.result.length);
+})
+},[])
+
   return (
     <div >
-      <div><Bacimg img={"https://images.unsplash.com/photo-1656703306407-88adf9044949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=843&q=80"}/></div>
+      {/* <div><Bacimg img={"https://images.unsplash.com/photo-1656703306407-88adf9044949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=843&q=80"}/></div> */}
+      <div>
+       {/* {console.log(aboutData.result[0].aboutimg)} */}
+        <img src={`data:image/jpeg;charset=utf-8;base64,${aboutData.result[0].aboutimg[0].filename}`}  alt="no img" srcSet="" />
+        </div>
       <Navbar op={setOpenmod} conset={setContribut}/>
+      <div className="d-flex  flex-column justify-content-center align-items-center container  hading">
+          <h1>ABOUT US</h1>
+        </div>
       <div className="container">
-      <img  className="d-flex justify-content-center mx-auto about-size" src={Aboutimg} alt="" />
+        <h2>About This Company</h2>
+        <h4></h4>
       </div>
-    <h1 className="d-flex justify-content-center">Our top venders</h1>
-      <Vanders/>
+
+
+
+
+      {/* <div className="container">
+      <img  className="d-flex justify-content-center mx-auto about-size" src={Aboutimg} alt="" />
+      </div> */}
+    {/* <h1 className="d-flex justify-content-center">Our top venders</h1> */}
+      {/* <Vanders/> */}
       {/* <div className=" imggrup container-fluid w-100">
             <img src="" alt="" />
       </div> */}
-      <div className=" container ab">
+      {/* <div className=" container ab">
         <div className="first">
         <div className="offic m-2">
           <h1 className="m-2"> Our Office </h1>
@@ -65,7 +98,7 @@ const About = () => {
         </div>
         </div>
         
-      </div>
+      </div> */}
       
       <Footer/>
       {opencontribut ? <Contribute closeconMod={setContribut} />:""}
