@@ -5,7 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 // import { useEffect } from "react";
 const VanderReister = (props) => {
-  const [singelfile, setSigelfile] = useState();
+  const [pan,setPan] = useState();
   const [ multifile, setMultifile] = useState();
 
   // const formData = new FormData();
@@ -22,7 +22,6 @@ const VanderReister = (props) => {
     Lname: "",
     Email: "",
     Phonnumber: "",
-    ccId: "",
     Pan: "",
     Password: "",
     Re_password: "",
@@ -33,8 +32,8 @@ const VanderReister = (props) => {
     setData(newdata);
   };
 
-  const onsingalChange = (e) => {
-    setSigelfile(e.target.files[0]);
+  const onpancard = (e) => {
+    setPan(e.target.files[0]);
   };
   // const onmultioffChange=e=>{
   //   const uplod=[...multifile]
@@ -64,10 +63,10 @@ const VanderReister = (props) => {
         Phonnumber: data.Phonnumber,
         Fname: data.Fname,
         Lname: data.Lname,
-        ccId: data.ccId,
+        Pan_card_img:pan,
         Pan: data.Pan,
-        profileImg: singelfile,
-        demoPhotoes: multifile,
+        // profileImg: singelfile,
+        // demoPhotoes: multifile,
         Password: data.Password,
         Re_password: data.Re_password,
       },
@@ -75,8 +74,8 @@ const VanderReister = (props) => {
     )
       .then((res) => {
         console.log(res);
-        console.log(singelfile, "eta hol singel file");
-        console.log(multifile, "eta holo multupel file");
+        // console.log(singelfile, "eta hol singel file");
+        // console.log(multifile, "eta holo multupel file");
       })
       .catch(function (error) {
         alert(error.response.data);
@@ -129,13 +128,19 @@ const VanderReister = (props) => {
         />
       </div>
       <div className="row inpu-things">
-        <input
-          onChange={(e) => Handel(e)}
-          type="text"
-          className="col-5"
-          name="ccId"
-          placeholder="Enter Your CCID"
-        />
+      
+          <input
+            type="file"
+            name="Pan_card_img"
+            multiple
+            onChange={onpancard}
+            // onChange={handleInputChange}
+            className="inputfile"
+          />
+          <label htmlFor="profileImg" className="inputlabel">
+            pan card photo
+          </label>
+        
         <input
           onChange={(e) => Handel(e)}
           type="text"
@@ -162,7 +167,7 @@ const VanderReister = (props) => {
       </div>
       <div className="photo-chous">
         <div>
-          <input
+          {/* <input
             type="file"
             name="profileImg"
             multiple
@@ -172,10 +177,10 @@ const VanderReister = (props) => {
           />
           <label htmlFor="profileImg" className="inputlabel">
             Choose a profile picture
-          </label>
+          </label> */}
         </div>
         <div>
-          <input
+          {/* <input
             type="file"
             name="demoPhotoes"
             
@@ -183,19 +188,19 @@ const VanderReister = (props) => {
             onChange={onmultiChange}
             // onChange={handleInputChange}
             className="inputfile"
-          />
-          <label htmlFor="demoPhotoes" className="inputlabel">
+          /> */}
+          {/* <label htmlFor="demoPhotoes" className="inputlabel">
             Choose 4 Demo Photoes
-          </label>
+          </label> */}
         </div>
       </div>
-      <div className="danger">
+      {/* <div className="danger">
         <CgDanger />
         <p>
           You need to uplod 4 of your best images in one folder to be eligible
           as a vender
-        </p>
-      </div>
+        </p> 
+      </div> */}
       <input type="submit" value="Register" className="up-btn" />
       <div
         className="regbtn"

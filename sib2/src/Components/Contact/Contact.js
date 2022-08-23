@@ -38,7 +38,7 @@ const Submit=(e)=>{
 
   return (
     <div>
-      <div><Bacimg/></div>
+      <div><Bacimg img="https://images.unsplash.com/photo-1656904889109-e59d094ab030?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"/></div>
       <Navbar op={setOpenmod}  conset={setContribut} />
       <>
       <div className="container">
@@ -47,14 +47,15 @@ const Submit=(e)=>{
       </div>
       <div className="contact-page">
       
-        <div className="container pe-0 mt-3">
-          
-          <h2 style={{ color: "black", fontFamily: 'Rubik'}} className=" mx-4">
+        <div className="container-fluid cp-massage">
+          <h1> Have something in mind?Let's talk.</h1>
+          <p>share your ideas and questions </p>
+          {/* <h2 className=" mx-4">
             Have something in mind?Let's talk.
           </h2>
           <p className="m-2 mb-3" style={{ fontSize:"20px" }} >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, animi!
-          </p>
+          </p> */}
           <form className="form my-3 mx-auto" onSubmit={(e)=>Submit(e)} action="/Contect_form_Post"  method="post">
            
               <b style={{ color: "black", fontfamily: 'Rubik',fontSize:"30px" }} className="" >Send a Massage</b>
@@ -77,18 +78,18 @@ const Submit=(e)=>{
           </form>
         </div>
         <div className="careers">
-          <h5  style={{ color: "black", fontFamily: 'Rubik', fontSize:"30px" }} >careers</h5>
-          <p style={{ fontSize:"20px",marginTop:"1rem" }}>Have a project in mind and just say hi? Send a message:</p>
-          <b style={{ color: "blue" }}>info@shineinblue.com</b>
+          <h3>careers</h3>
+          <p >Have a project in mind and just say hi? Send a message:</p>
+          <b >info@shineinblue.com</b>
         </div>
         <div className="about">
-            <h5  style={{ color: "black", fontFamily: 'Rubik', fontSize:"30px", }}>About us</h5>
-            <p style={{marginTop:"1rem"}}>Would you like to join our growing team? Please contact us at:</p>
-            <b style={{ color: "blue" }}>info@shineinblue.com</b>
-            <div className="dnk">
-            <h5 style={{ color: "black", fontFamily: 'Rubik', fontSize:"30px" }} >FIND ACTIVE POSITIONS</h5>
+            <h3 >About us</h3>
+            <p >Would you like to join our growing team? Please contact us at:</p>
+            <b >info@shineinblue.com</b>
+            {/* <div className="dnk">
+            <h5 >FIND ACTIVE POSITIONS</h5>
             
-        </div>
+        </div> */}
         </div>
         
       </div>

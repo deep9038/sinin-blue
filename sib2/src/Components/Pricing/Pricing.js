@@ -18,7 +18,7 @@ function Pricing() {
     }
     return (
         <div  >
-            <div><Bacimg/></div>
+            <div><Bacimg img="https://images.unsplash.com/photo-1661226613879-38519f4e56a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"/></div>
             <Navbar op={setOpenmod}  conset={setContribut}/>
             <h1 style={{textAlign:"center",width:"80%" }} className="d-flex mx-auto my-5 justify-content-center">Find &amp; Buy Millions of Photos That Meet Your Budget</h1>
             <div className="sub-cng ">

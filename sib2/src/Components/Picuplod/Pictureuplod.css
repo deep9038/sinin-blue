@@ -201,8 +201,9 @@ span {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: 'Mukta', sans-serif;
   background: transparent;
-  background-color: red;
+  background-color:rgb(131, 125, 125);;
   color: #fff;
   border: 0;
   font-weight: 700;
@@ -331,7 +332,7 @@ label {
     -webkit-user-select: none;
     user-select: none;
     background: transparent;
-    background-color: red;
+    background-color: rgb(131, 125, 125);
     color: #fff;
     border: 0;
     font-weight: 700;

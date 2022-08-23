@@ -25,9 +25,9 @@ useEffect(()=>{
     axios
     .get("http://192.168.29.146:3000/api/photoAboutContent_api")
     .then(res=>{
-      setAboutData(res.data)
+      setAboutData(res.data.result)
     
-    // console.log(res.data.result.length);
+      console.log(res.data);
 })
 },[])
 
@@ -35,8 +35,10 @@ useEffect(()=>{
     <div >
       {/* <div><Bacimg img={"https://images.unsplash.com/photo-1656703306407-88adf9044949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=843&q=80"}/></div> */}
       <div>
+        
        {/* {console.log(aboutData.result[0].aboutimg)} */}
-        <img src={`data:image/jpeg;charset=utf-8;base64,${aboutData.result[0].aboutimg[0].filename}`}  alt="no img" srcSet="" />
+        <img src={aboutData}  alt="no img" srcSet="" />
+        <img src={`http://192.168.29.146:3000/api/photoAboutContent_api/${aboutData}`}  alt="no img" srcSet="" />
         </div>
       <Navbar op={setOpenmod} conset={setContribut}/>
       <div className="d-flex  flex-column justify-content-center align-items-center container  hading">
