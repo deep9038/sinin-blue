@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 .stage-row {
   position: relative;
   margin: 0;
@@ -35,7 +36,7 @@
   padding: 10px;
 }
 .filling-page .row div p {
-  font-size: large;
+  font-size: x-large;
 }
 .fil-but {
   position: relative;
@@ -48,7 +49,7 @@
     -webkit-user-select: none;
     user-select: none;
     background: transparent;
-    background-color: red;
+    background-color: rgb(83, 81, 81);
     color: #fff;
     border: 0;
     font-weight: 700;
@@ -62,10 +63,11 @@
   justify-content: center;
   align-items: center;
 }
-.ulode h2 {
-  font-size: 24px;
-  margin: 0 0 2rem;
+.ulode h3 {
+  font-family: 'Oswald', sans-serif;
   color: black;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 .ulode {
   box-sizing: border-box;
@@ -76,12 +78,16 @@
 
   overflow-x: scroll;
 }
+.uplod-iput{
+  margin-left: 20px;
+}
 
 .tittal-hading label {
   display: block;
-  margin: 0 0 1rem;
+  /* margin: 0 0 1rem; */
+  font-size: 15px;
   color: inherit;
-  font-weight: 700;
+  /* font-weight: 700; */
   width: 100%;
 }
 .tittal input,
@@ -284,10 +290,10 @@ label {
   margin-bottom: 0;
 }
 .selectcolor {
-  background-color: rgb(231, 18, 18);
+  background-color: rgb(0 0 0 / 13%);
 }
 .beforslectcolor {
-  background-color: rgb(228, 127, 127);
+  background-color: rgb(0 0 0 / 13%);
 }
 .freebyupdet {
   display: block;
@@ -344,7 +350,7 @@ label {
 .p {
   flex: 1;
   padding: 0 0.25rem;
-  color: rgb(243, 65, 65);
+  color: #636464;
   font-family: "Inter", sans-serif;
 }
 .shado-siv div {
@@ -365,4 +371,9 @@ label {
     width: 14px;
     height: 14px;
   }
+}
+.picfordemoorprofile{
+  background-color: green;
+  background: linear-gradient(180deg, #198754, #00000080);
+  color: wheat;
 }

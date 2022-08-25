@@ -143,6 +143,7 @@ button{
 }
 .welcome{
     font-size:xx-large;
+    margin-bottom: 2rem;
 }
 .fp h4{
     font-size: inherit;
@@ -203,3 +204,4 @@ button{
         font-size: xx-small;
     }
 }
+

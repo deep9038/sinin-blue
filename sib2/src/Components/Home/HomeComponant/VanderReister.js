@@ -3,10 +3,13 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import { CgDanger } from "react-icons/cg";
 import { useState } from "react";
 import Axios from "axios";
+import Upimg from "./Upimg";
 // import { useEffect } from "react";
 const VanderReister = (props) => {
+  const [openImg,setOpenImg]=useState(false)
   const [pan,setPan] = useState();
-  const [ multifile, setMultifile] = useState();
+  const [ multifile, setMultifile] = useState([]);
+  const [profileImg,setProfileImp]= useState()
 
   // const formData = new FormData();
 
@@ -43,9 +46,7 @@ const VanderReister = (props) => {
   //     }
   //   })
   // }
-  const onmultiChange=(e)=>{
-   setMultifile(e.target.files)
-  }
+  
  
   const config = { headers: { "Content-Type": "multipart/form-data" } };
   const url = "http://192.168.29.146:3000/api/vendor_Register";
@@ -65,8 +66,8 @@ const VanderReister = (props) => {
         Lname: data.Lname,
         Pan_card_img:pan,
         Pan: data.Pan,
-        // profileImg: singelfile,
-        // demoPhotoes: multifile,
+        profileImg:profileImg,
+        demoPhotoes: multifile,
         Password: data.Password,
         Re_password: data.Re_password,
       },
@@ -91,6 +92,7 @@ const VanderReister = (props) => {
     >
       <input
         type="text"
+        className="vender-input"
         name="Name"
         onChange={(e) => Handel(e)}
         placeholder="Enter User Name"
@@ -99,14 +101,14 @@ const VanderReister = (props) => {
         <input
           onChange={(e) => Handel(e)}
           type="text"
-          className="col-5"
+          className="col-5 vender-input"
           name="Fname"
           placeholder="First Name"
         />
         <input
           onChange={(e) => Handel(e)}
           type="text"
-          className="col-5"
+          className="col-5 vender-input"
           name="Lname"
           placeholder="Last Name"
         />
@@ -115,14 +117,14 @@ const VanderReister = (props) => {
         <input
           onChange={(e) => Handel(e)}
           type="email"
-          className="col-5"
+          className="col-5 vender-input"
           name="Email"
           placeholder="Enter Emal"
         />
         <input
           onChange={(e) => Handel(e)}
           type="text"
-          className="col-5"
+          className="col-5 vender-input"
           name="Phonnumber"
           placeholder="Enter Your PhonNumber"
         />
@@ -132,10 +134,11 @@ const VanderReister = (props) => {
           <input
             type="file"
             name="Pan_card_img"
+            
             multiple
             onChange={onpancard}
             // onChange={handleInputChange}
-            className="inputfile"
+            className="inputfile "
           />
           <label htmlFor="profileImg" className="inputlabel">
             pan card photo
@@ -144,7 +147,7 @@ const VanderReister = (props) => {
         <input
           onChange={(e) => Handel(e)}
           type="text"
-          className="col-5"
+          className="col-5 vender-input"
           name="Pan"
           placeholder="Enter Your Pan"
         />
@@ -153,54 +156,23 @@ const VanderReister = (props) => {
         <input
           onChange={(e) => Handel(e)}
           type="password"
-          className="col-5"
+          className="col-5 vender-input"
           name="Password"
           placeholder="Enter Your Password"
         />
         <input
           onChange={(e) => Handel(e)}
           type="text"
-          className="col-5"
+          className="col-5 vender-input"
           name="Re_password"
           placeholder="Re_Enter Password"
         />
       </div>
-      <div className="photo-chous">
-        <div>
-          {/* <input
-            type="file"
-            name="profileImg"
-            multiple
-            onChange={onsingalChange}
-            // onChange={handleInputChange}
-            className="inputfile"
-          />
-          <label htmlFor="profileImg" className="inputlabel">
-            Choose a profile picture
-          </label> */}
-        </div>
-        <div>
-          {/* <input
-            type="file"
-            name="demoPhotoes"
-            
-            multiple
-            onChange={onmultiChange}
-            // onChange={handleInputChange}
-            className="inputfile"
-          /> */}
-          {/* <label htmlFor="demoPhotoes" className="inputlabel">
-            Choose 4 Demo Photoes
-          </label> */}
-        </div>
-      </div>
-      {/* <div className="danger">
-        <CgDanger />
-        <p>
-          You need to uplod 4 of your best images in one folder to be eligible
-          as a vender
-        </p> 
-      </div> */}
+      
+    <div onClick={()=>setOpenImg(true)} className="btn picfordemoorprofile">
+      uplod picture
+      
+    </div>
       <input type="submit" value="Register" className="up-btn" />
       <div
         className="regbtn"
@@ -210,6 +182,7 @@ const VanderReister = (props) => {
       >
         <MdArrowBackIosNew />
       </div>
+      {openImg?<Upimg setOpenImg={setOpenImg} profile={setProfileImp} setDemophotos={setMultifile} demophotos={multifile}/>:""}
     </form>
   );
 };

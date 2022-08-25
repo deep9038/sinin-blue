@@ -63,9 +63,9 @@ const Modal = ({ closeModal }) => {
         
 
         <div className="logpan ">
-          <b className="d-flex justify-content-center pb-3  welcome">
-            {openreg ? "RAGISTER" : "WELCAME"}
-          </b>
+          <h1 className="d-flex justify-content-center pb-3  welcome">
+            {openreg ? "RAGISTER" : "WELCOME"}
+          </h1>
           <button onClick={() => closeModal(false)}>X</button>
           {openreg?"":what==="vender"?<VanderReister op={setOpenreg}/>:<Accountgf/>}
           {openreg&&<Chusecat op={setOpenreg} bal={openreg} cal={what} what={setWhat}/>}

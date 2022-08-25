@@ -40,7 +40,7 @@ const Submit =(e)=>{
 }
   return (
     <form className="cintainer ulode" onSubmit={(e)=>Submit(e)} action="/pic_uplod_post" method="post">
-      <h2>General</h2>
+      <h3>General</h3>
       <div className="uplod-iput">
         <div className="tittal">
           <div className="tittal-hading">
@@ -94,16 +94,7 @@ const Submit =(e)=>{
             </div>
           </div>
         </div>
-        <div className="tittal">
-          <div className="tittal-hading">
-            <label htmlFor="">CC</label>
-          </div>
-
-          <div className="radio-but">
-            <input type="file" name="CC" onChange={(e)=>Handel} id=" file-input" />
-           
-          </div>
-        </div>       
+              
         <div className="tittal">
           <div className="tittal-hading">
             <label htmlFor="">Category</label>

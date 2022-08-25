@@ -33,7 +33,7 @@ const Contribute = (props) => {
   }
   return (
     <div className="container-fluid con-modal-container ">
-      <div><Bacimg img={"https://c.tenor.com/l0BrkgzW9SwAAAAM/zero-two-background.gif"}/></div>
+      <div><Bacimg img={"https://images.unsplash.com/photo-1661246458236-0c9dc2f74672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"}/></div>
       <div className="con-modal container">
         <h1>Select Submission Type</h1>
         <div className="form-check">
