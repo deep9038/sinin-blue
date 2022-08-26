@@ -25,6 +25,7 @@ import Addresh from "./Components/Dashbord/Addresh";
 import Satting from "./Components/Dashbord/Satting";
 import Logout from "./Components/Dashbord/Logout";
 import ForgotPassword from "./Components/ForgotPassword";
+import NewproductPage from "./Components/Products/NewproductPage";
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
           <Route exact path="/Collection/:imgId" element={<Imgdetails />}/>
           <Route exact path="/Vender" element={<Vederpage/>}/>
           <Route exact path="/Vender/:vaderProfile" element={<VederpageProfile/>}/>
-          <Route exact path="/products" element={<Products/>}/>
+          <Route exact path="/products" element={<NewproductPage/>}/>
           <Route exact path="/products/:filtername" element={<Products/>}/>
           <Route exact path="/Paidpicuplod" element={<Paidpicup/>}/>
           <Route exact path="/freepicuplod" element={<Freebie/>}/>

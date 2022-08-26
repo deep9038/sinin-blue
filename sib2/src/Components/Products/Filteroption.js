@@ -32,7 +32,7 @@ const Filteroption = (props) => {
 
               <div className="dropdown-item">landscape</div>
               <div className="dropdown-item">dark</div>
-            </div>
+            </div>   
           </div>
         </div>
         <div className="assets">

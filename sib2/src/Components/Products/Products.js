@@ -10,7 +10,7 @@ import Bacimg from '../Home/HomeComponant/Bacimg'
 const Products = () => {
     const [openmod, setOpenmod] = useState(false);
     const [opencontribut,setContribut]=useState(false)
-    let {filtername}=useParams()
+    let {filtername}=useParams() 
   return (
     <div>
       <div><Bacimg/></div>

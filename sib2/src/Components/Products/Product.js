@@ -11,7 +11,7 @@ const getFilter=(a,b)=>{
   }
   
 }
-const Productcat = (props) => {
+const  Productcat = (props) => {
   const [quary,setQuary]=useState(props.fil)
   const filterd=getFilter(quary,Galdata)
   return (
