@@ -9,14 +9,11 @@ const Navbar = (props) => {
   
   return (
     <>
-      
       <Uprnav set={props.op}  conset={props.conset}/>
       {/* <Resnav/> */}
-      <Link to="/Dashbord" >  dasbord </Link>
+      
       <Undnav set={props.op} conset={props.conset}/>
-      
     </>
-      
   );
 };
 

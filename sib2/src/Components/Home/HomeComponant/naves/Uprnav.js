@@ -50,6 +50,9 @@ const Uprnav = (props) => {
               <li className="nav-link">
                 <Link to="/Pricing">Pricing</Link >
               </li>
+              <li className="nav-link">
+                <Link to="/Dashbord">Dashbord</Link >
+              </li>
             </ul>
           </div>
           <div className="container log-in-pannel">
