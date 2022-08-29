@@ -26,6 +26,7 @@ import Satting from "./Components/Dashbord/Satting";
 import Logout from "./Components/Dashbord/Logout";
 import ForgotPassword from "./Components/ForgotPassword";
 import NewproductPage from "./Components/Products/NewproductPage";
+import MainCart from "./Components/Cart/MainCart";
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
           <Route exact path="/freepicuplod" element={<Freebie/>}/>
           <Route exact path="*" element={<Error/>}/>
           <Route exact path="/imgFame/:ProductFrame" element={<Frame/>}/>
-          <Route exact path="/Dashbord" element={<Dashbord/>}/>
+          <Route exact path="s" element={<Dashbord/>}/> 
           <Route exact path="/Downlod/:product" element={<Dowlodimg/>}/>
           <Route exact path="/Etris" element={<Entris/>}/>
           <Route exact path="/Assates" element={<Assats/>}/>
@@ -60,7 +61,7 @@ function App() {
           <Route exact path="/setting" element={<Satting/>}/>
           <Route exact path="/Log-out" element={<Logout/>}/>
           <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
-
+          <Route exact path="/cart" element={<MainCart/>}/>
         </Routes>
       </Router>
     </>
