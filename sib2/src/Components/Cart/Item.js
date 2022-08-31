@@ -1,29 +1,34 @@
 import React from 'react'
-
-const Item = () => {
+import { useContext } from 'react'
+import { cartContext } from "./Cart";
+const Item = ({Img,catame,price,id,quantity}) => {
+const{ removeItem,increment,decrement}=useContext(cartContext)
+if(quantity===0){
+  removeItem(id)
+}
   return (
     <>
     <div className="items-info">
     <div className="product-img">
       <img
-        src="https://photos.shineinblue.com/wp-content/uploads/2022/05/555-5.jpg"
+        src={Img}
         alt=""
       />
     </div>
     <div className="title">
-      <h2>lost mastang</h2>
+      <h2>{catame}</h2>
       <p>zoro</p>
     </div>
     <div className="add-minus-quantity">
-      <i className="fas fa-minus minus"></i>
-      <input type="text" placeholder="2" />
-      <i className="fas fa-plus add"></i>
+      <i className="fas fa-minus minus" onClick={()=>decrement(id)}></i>
+      <input type="text" placeholder={quantity} />
+      <i className="fas fa-plus add" onClick={()=>increment(id)}></i>
     </div>
     <div className="price">
-      <h3>200rs</h3>
+      <h3>{price}₹</h3>
     </div>
     <div className="remove-item">
-    <i className="fas fa-trash-alt remove"></i>
+    <i className="fas fa-trash-alt remove" onClick={()=>removeItem(id)}></i>
     </div>
   </div>
   <hr />

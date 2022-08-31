@@ -28,8 +28,7 @@ const Explor = () => {
         </div>
         {/* <Surchbar  setquary={setQuary} Quary={quary}/> */}
         <br />
-        <br />
-        <br />
+     
         <Excard />
         <div className="st-brand">
           <div className="s-brand ">

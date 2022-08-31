@@ -15,6 +15,10 @@
     /* font-size: 1.6rem; */
     width: 0;
 }
+.card-img-top{
+    height: 200px;
+    border-radius: 10px;
+}
 .explor p{
     text-align: center;
     margin-bottom: 2rem;
