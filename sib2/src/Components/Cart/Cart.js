@@ -12,7 +12,7 @@ const initialState = {
 }
 const Cart = () => {
   // const [cartItems,setCartItem]=useState(Explordata)
-  const [state,dispatch]=useReducer(reducer,initialState)
+  const [state,dispatch]=useReducer(reducer,initialState)  
   const removeItem=(id)=>{
     return dispatch({
       type:"REMOVE_ITEM",

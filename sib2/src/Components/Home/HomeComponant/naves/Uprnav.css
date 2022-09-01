@@ -14,6 +14,9 @@
     background-color: white;
 
 }
+.contribute{
+
+}
 .navbar-brand{
     height: 50px;
     width: auto;
@@ -62,8 +65,10 @@
     align-content: center;
 }
 .log-in-pannel{
-    width: auto;
-    margin-right: 1rem;   
+    width: max-content;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;  
 }
 h5{
     margin: 0.4rem 0;
@@ -92,14 +97,30 @@ p{
     padding: 0;
 }
 
+.uper-nav-manu{
+    width: inherit;
+}
+.user-panel-log-cart-ragister{
+    display: flex;
+    justify-content: end;
+    align-items: center;
 
+}
+.cart-in-nave{
+    padding: 0 1rem;
+}
 
 @media only screen and (max-width: 853px){
     .uper-nav-manu{
       display: none;
     }
-    .log-in-pannel{
+    .user-panel-log-cart-ragister{
         display: none;
+    }
+    #brand-img {
+       
+        border-right:none;
+      
     }
     
    

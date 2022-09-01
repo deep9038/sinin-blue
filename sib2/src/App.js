@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/freepicuplod" element={<Freebie/>}/>
           <Route exact path="*" element={<Error/>}/>
           <Route exact path="/imgFame/:ProductFrame" element={<Frame/>}/>
-          <Route exact path="s" element={<Dashbord/>}/> 
+          <Route exact path="/Dashbord" element={<Dashbord/>}/> 
           <Route exact path="/Downlod/:product" element={<Dowlodimg/>}/>
           <Route exact path="/Etris" element={<Entris/>}/>
           <Route exact path="/Assates" element={<Assats/>}/>
