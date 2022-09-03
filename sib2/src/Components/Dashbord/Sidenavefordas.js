@@ -1,6 +1,6 @@
 import React from "react";
 import { MdDashboard } from "react-icons/md";
-import { AiFillPlusCircle } from "react-icons/ai";
+// import { AiFillPlusCircle } from "react-icons/ai";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { FaRegAddressCard } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
@@ -27,11 +27,9 @@ const Sidenavefordas = () => {
       <div className={openham?" hamberger-manu":"deshbord-manu"}>
         <div className="desbord-manu-item">
           <Link to="/Dashbord" className="d-manu-item">
-            <MdDashboard className="icon-des" /> <span>DASHBOARD</span>
+            <MdDashboard className="icon-des" /> <span>Profile</span>
           </Link>
-          <Link to="/Etris" className="d-manu-item">
-            <AiFillPlusCircle className="icon-des" /> <span>ENTRELS</span>
-          </Link>
+          
           {/* <Link to="/Assates" className="d-manu-item"><FaArrowAltCircleDown className='icon-des'/><span>Assates</span></Link> */}
           {/* <Link to="/Massge" className="d-manu-item"><AiFillMessage className='icon-des'/><span>Messages</span></Link> */}
           <Link to="/Notification" className="d-manu-item">

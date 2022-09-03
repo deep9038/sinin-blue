@@ -1,9 +1,10 @@
 import React from 'react'
-import {AiFillMessage} from "react-icons/ai"
-import {IoNotificationsCircle} from 'react-icons/io5'
-import {FaShoppingBag} from "react-icons/fa"
+import {AiOutlineShoppingCart,AiOutlineDownload} from "react-icons/ai"
+import {FaRegAddressCard} from 'react-icons/fa'
+// import {FaShoppingBag} from "react-icons/fa"
 import {MdAccountTree}from "react-icons/md"
 import {BsArrowRightShort} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 const Acc = () => {
   return (
     <div>
@@ -11,28 +12,28 @@ const Acc = () => {
         <div className="acssasoris-item">
             <div className="account-details conshuit">
             <MdAccountTree className='icon-ass'/>
-            <span class="ulz--title">Account details<BsArrowRightShort/></span>
+            <Link class="ulz--title" to='/setting'>Account details<BsArrowRightShort/></Link>
             <p className="ulz-mt-1 ulz-mb-0">Provide personal details and how we can reach you</p>
             </div>
         </div>
         <div className="acssasoris-item">
         <div className="Massage conshuit">
-        <AiFillMessage className='icon-ass'/>
-            <span class="ulz--title">Account details<BsArrowRightShort/></span>
+        <AiOutlineShoppingCart className='icon-ass'/>
+        <Link class="ulz--title" to='/cart'>Cart<BsArrowRightShort/></Link>
             <p class="ulz-mt-1 ulz-mb-0">Provide personal details and how we can reach you</p>
             </div>
         </div>
         <div className="acssasoris-item">
         <div className="My-order conshuit">
-        <FaShoppingBag className='icon-ass'/>
-            <span class="ulz--title">Account details<BsArrowRightShort/></span>
+        <AiOutlineDownload className='icon-ass'/>
+        <Link class="ulz--title" to='/DownlodDasbord'>Downlod<BsArrowRightShort/></Link>
             <p class="ulz-mt-1 ulz-mb-0">Provide personal details and how we can reach you</p>
             </div>
         </div>
         <div className="acssasoris-item">
         <div className="Notification conshuit">
-        <IoNotificationsCircle className='icon-ass'/>
-            <span class="ulz--title">Account details<BsArrowRightShort/></span>
+        <FaRegAddressCard className='icon-ass'/>
+        <Link class="ulz--title" to='/Addresh'>Addresh<BsArrowRightShort/></Link>
             <p class="ulz-mt-1 ulz-mb-0">Provide personal details and how we can reach you</p>
             </div>
         </div>

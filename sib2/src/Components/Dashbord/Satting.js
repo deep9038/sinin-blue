@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Contribute from "../Contribute";
 import Bacimg from "../Home/HomeComponant/Bacimg";
 import Modal from "../Home/HomeComponant/Modal";
@@ -42,64 +43,20 @@ const Satting = () => {
                   <input className="form-control" type="text" name="LName" />
                 </div>
               </div>
-              <div>
-                <label className="form-label" htmlFor="Display-Name">
-                  Display Name
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="Display-Name"
-                />
-              </div>
+             
               <div>
                 <label className="form-label" htmlFor="Email">
                   Email
                 </label>
                 <input className="form-control" type="email" name="Email" />
               </div>
-              <h2 className="from-h2">Password chang</h2>
-              <div>
-                <label className="form-label" htmlFor="Pasword">
-                  Current password{" "}
-                </label>
-                <input
-                  className="form-control"
-                  type="password"
-                  name="Pasword"
-                />
-              </div>
-              <div>
-                <label className="form-label" htmlFor="New-password">
-                  New password{" "}
-                </label>
-                <input
-                  className="form-control"
-                  type="password"
-                  name="New-password"
-                />
-              </div>
-              <div>
-                <label className="form-label" htmlFor="Confirm_password">
-                  Confirm new password
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="Confirm_password"
-                />
-              </div>
-              <div>
-                <label className="form-label" htmlFor="From_ragister">
+              <div className="pasword-change-section">
+              <Link to="/ForgotPassword" className="Forgot-password">
                   {" "}
-                  Form Registration{" "}
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="From_ragister"
-                />
+                  Lost Your Password
+                </Link>
               </div>
+              
               <div>
                 <label className="form-label" htmlFor="Avatar_image">
                   Avatar image

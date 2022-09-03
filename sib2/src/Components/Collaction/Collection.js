@@ -6,23 +6,14 @@ import"./Collaction.css"
 import { useState } from 'react';
 import Modal from "../Home/HomeComponant/Modal";
 import Contribute from "../Contribute";
-import {GrLinkTop}from 'react-icons/gr'
+// import {GrLinkTop}from 'react-icons/gr'
 import Footer from "../Footer/Footer";
 import Bacimg from "../Home/HomeComponant/Bacimg";
+import BackToTop from "../BackToTopButon/BackToTop";
 const Collection = () => {
-  const [flot,setFlot]=useState(false)
-  const motaio=()=>{
-    if(window.scrollY >=200){
-      setFlot(false)
-    }
-    else{
-      setFlot(true)
-    }
-  }
-  const goToTop=()=>{
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  }
-  window.addEventListener('scroll', motaio);
+  // const [flot,setFlot]=useState(false)
+ 
+
   const [quary,setQuary]=useState()
   const [openmod,setOpenmod]=useState(false)
   const [opencontribut,setContribut]=useState(false)
@@ -41,13 +32,9 @@ const Collection = () => {
       </div>
       <Surchbar  setquary={setQuary} Quary={quary} />
       <Galary Quary={quary}/>
-      
+      <BackToTop/>
     </div>
-    <div className="up-button-con">
-    <div className={flot? "d-none": " up-button vert-move"} onClick={goToTop}>
-      <GrLinkTop size={30}/>
-    </div>
-    </div>
+    
     <Footer/>
     {opencontribut ? <Contribute closeconMod={setContribut} />:""}
     { openmod && <Modal closeModal={setOpenmod}/>}

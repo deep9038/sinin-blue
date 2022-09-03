@@ -26,32 +26,16 @@ const Dashbord = () => {
           
           <div className="desbord-matarial col-9">
             <h1>Dashboard</h1>
-            <div className="ulz-author-cover">
-              <img
-                className="backimg"
-                src="https://media.istockphoto.com/photos/liquefied-natural-gas-tanker-ship-in-sea-picture-id1317634535?b=1&k=20&m=1317634535&s=170667a&w=0&h=6Rfc6nsn5F42tGdQyoMugXPBIJ-_KS1veKJqKMuYdyI="
-                alt=""
-              />
-              <div className="ulz--cover">
-                <div className="ulz--inner">
-                  <div className="ulz--heading">
-                    <div className="ulz--cover-avatar">
-                      <img src="" className="vanderimg" alt="" />
-                    </div>
-                    <div className="ulz--action">
-                      <button
-                        className="btn follow-btn"
-                        data-modal="conversation"
-                      >
-                        <span>FOLLOW</span>
-                      </button>
-                      <p className="follower">9999k</p>
-                    </div>
+            <div className="profile-page-background-img-container">
+
+              <img src="https://images.unsplash.com/photo-1662105262582-72bc7802cdcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60" className="profile-page-background-img" alt="" />
+              <div className="peofile-img-container">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                  <div>
+                      <h3>kacy cage</h3>
                   </div>
-                  <h5 className="ulz--name">erik</h5>
-                  <p className="ulz--bio"></p>
-                </div>
               </div>
+              
             </div>
 
             <Acc />
