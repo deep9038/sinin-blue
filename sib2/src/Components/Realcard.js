@@ -6,7 +6,7 @@ const Realcard = (props) => {
   return (
     <li>
       <Link to={`/products/${props.cat}`} className="container cat-link" >
-          <h4 className=" ">{props.cetagory}</h4>
+          <h4 className=" ">{props.cat}</h4>
       </Link>
       </li>
   );

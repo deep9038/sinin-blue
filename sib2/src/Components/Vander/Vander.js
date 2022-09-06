@@ -46,9 +46,7 @@ const Vander = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="img-na-item-list">
-                <div className="img-nav-tem nav-text">X</div>
-              </div>
+              
             </div>
           </div>
         </div>

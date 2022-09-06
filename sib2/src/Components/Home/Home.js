@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Uprnav from "./HomeComponant/naves/Uprnav";
 import Undnav from "./HomeComponant/naves/Undnav";
 import Surchbar from "../Surchbar";
@@ -11,19 +11,37 @@ import Modal from "./HomeComponant/Modal";
 import Contribute from "../Contribute";
 // import ShowImages from "../ShowImages";
 import Galary from "../Collaction/Galary";
+import axios from "axios";
 
 function Home() {
   const [quary, setQuary] = useState();
   const [openmod, setOpenmod] = useState(false);
   const [opencontribut, setContribut] = useState(false);
   const [openimges, setOpenImges] = useState(false);
-  
+  const [homeimg,setHomeimg]=useState()
+  const [cat,setCat]=useState([])
+  const url="http://192.168.29.146:3000/api/categoryAPI";
+  // const addData=((a)=>setCat(a))
+  useEffect(()=>{
+    axios
+    .get("http://192.168.29.146:3000/api/photoAboutContent_api")
+    .then(res=>{
+     setHomeimg(res.data.result)
+     console.log(res.data.result)
+})
+    axios.get(url).then(res=>{
+      console.log(res.data.result)
+      setCat(res.data.result)
+      
+    }).catch(err=>{
+      console.log(err)
+    })
+  },[])
   // https://192.168.29.146:3000/api/vendorData
-
   return (
     <>
       <div>
-        <Bacimg img="https://media4.giphy.com/media/fC6BAcnLFF2o/giphy.gif?cid=ecf05e47yhm99z7k5e0e85r3gbd55ukte6a450di39mubn47&rid=giphy.gif&ct=g"/>
+        <Bacimg img={`${process.env.REACT_APP_LOCALHOST_KEY}`}/>
       </div>
       <div className="homediv">
         <Uprnav set={setOpenmod} conset={setContribut} />
@@ -37,14 +55,14 @@ function Home() {
         {openimges ? (
           quary.length>0 ? (
             <>
-              <Slide Quary={quary} />
+              <Slide Quary={quary} cat={cat}/>
               <Galary  Quary={quary}/>
             </>
           ) : (
-            <Slide  Quary={quary} />
+            <Slide  Quary={quary} cat={cat} />
           )
         ) : (
-          <Slide  Quary={quary} />
+          <Slide  Quary={quary} cat={cat} />
         )}
         </div>
 

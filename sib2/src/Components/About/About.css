@@ -82,6 +82,35 @@
     padding: 5px 20px;
    
 }
+.aboutpage-img{
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.abimg{
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    z-index: -1;
+    background-color: white;
+}
+.abimg img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.sin-poto-container{
+    width:100%;
+    margin-bottom: 2rem;
+}
+.sin-poto-container img{
+    width: 50%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
 @media only screen and (max-width: 853px){
     .ab{
        

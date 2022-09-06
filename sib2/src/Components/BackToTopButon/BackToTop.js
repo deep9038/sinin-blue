@@ -31,7 +31,6 @@ const BackToTop = () => {
             border:'none',
             background:'linear-gradient(334deg, #1cccd5, transparent)',
             borderRadius:'10px'
-
         }}
         onClick={scrollUp}
         ><AiOutlineUp/></button>

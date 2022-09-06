@@ -15,7 +15,7 @@ const getFilter=(a,b)=>{
 const Galary = (props) => {
   const filterd=getFilter(props.Quary,Galdata)
   return (
-    <div className="container mt-5 ">
+    <div className=" mt-5 ">
       <div className="val-gal-container">
         {filterd.map((val,ind) => {
           return (

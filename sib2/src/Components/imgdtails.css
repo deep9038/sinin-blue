@@ -79,7 +79,7 @@
     --dropdown-width: 100%;
 }
 .ulz-mod-action{
-    position: sticky;
+   
     top: 70px;
     padding-top: 1.75rem;
     margin-top: -1.75rem;
@@ -117,6 +117,10 @@ a {
 }
 .ulz-action-report.icon {
     font-size: 20px;
+}
+.related{
+    display: flex;
+    justify-content: center;
 }
 @media screen and (max-width: 550px){
     .ader-page-img{

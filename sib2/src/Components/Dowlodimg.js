@@ -2,7 +2,7 @@ import React from "react";
 import "./Dowloimg.css";
 import { MdDescription } from "react-icons/md";
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
-
+// import { useNavigate } from "react-router-dom";
 import { TbFrame } from "react-icons/tb";
 import Dropdownitm from "./Dropdownitm";
 import { Link, useParams } from "react-router-dom";
@@ -75,7 +75,7 @@ const Dowlodimg = () => {
                   </div>
                 </div>
               </div>
-              <div className="img-na-item-list">
+              <div className="img-na-item-list" onClick={()=>naviget(-1)} >
                 <div>X</div>
               </div>
             </div>

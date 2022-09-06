@@ -114,7 +114,7 @@ const Imgdetails = () => {
           </div>
         </div>
       </div>
-      <h4 className="">RELATED</h4>
+      <h4 className="related">RELATED</h4>
       <Galary/>
       {opencontribut ? <Contribute closeconMod={setContribut} /> : ""}
       {openmod && <Modal closeModal={setOpenmod} />}

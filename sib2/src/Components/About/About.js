@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import Bacimg from "../Home/HomeComponant/Bacimg";
 // import Aboutimg from '../sib2 frametmt/About-us-not-actualy-as-but-ass.gif'
 import axios from "axios";
+import horizontal from '../sib2 frametmt/horizontal.jpg'
 
 
 
@@ -37,19 +38,27 @@ useEffect(()=>{
       <div>
         
        {/* {console.log(aboutData.result[0].aboutimg)} */}
-        <img src={aboutData}  alt="no img" srcSet="" />
+        {/* <img src={aboutData}  alt="no img" srcSet="" /> */}
         <img src={`http://192.168.29.146:3000/api/photoAboutContent_api/${aboutData}`}  alt="no img" srcSet="" />
         </div>
       <Navbar op={setOpenmod} conset={setContribut}/>
-      <div className="d-flex  flex-column justify-content-center align-items-center container  hading">
-          <h1>ABOUT US</h1>
+      <div className="aboutpage-img">
+        <div className="abimg">
+          <img src={horizontal} alt=""/>
         </div>
+      <div className=" container  hading">
+        <div className="sin-poto-container d-flex justify-content-center align-items-center">
+        <img src="https://photos.shineinblue.com/wp-content/uploads/2022/05/logo-sib.png" alt="" />
+        </div>
+        
+          <h1 className="d-flex justify-content-center align-items-center">ABOUT US</h1>
+      </div>
+      
+      </div>
       <div className="container">
         <h2>About This Company</h2>
         <h4></h4>
       </div>
-
-
 
 
       {/* <div className="container">
