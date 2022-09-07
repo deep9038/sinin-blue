@@ -4,44 +4,62 @@ import Undnav from "./HomeComponant/naves/Undnav";
 import Surchbar from "../Surchbar";
 import Bacimg from "./HomeComponant/Bacimg";
 import "./Home.css";
-// import Card from "../Card";
+
 import Slide from "./HomeComponant/naves/Slide"
 import { useState } from "react";
 import Modal from "./HomeComponant/Modal";
 import Contribute from "../Contribute";
-// import ShowImages from "../ShowImages";
+
 import Galary from "../Collaction/Galary";
-import axios from "axios";
+
+// import { backgroundImg,homePageApi} from "../../api/api";
+// import axios from "axios";
+import { backgroundImg, homeCat } from "../../api/api";
 
 function Home() {
   const [quary, setQuary] = useState();
   const [openmod, setOpenmod] = useState(false);
   const [opencontribut, setContribut] = useState(false);
   const [openimges, setOpenImges] = useState(false);
-  const [homeimg,setHomeimg]=useState()
+  const [homeImg,setHomeimg]=useState()
   const [cat,setCat]=useState([])
-  const url="http://192.168.29.146:3000/api/categoryAPI";
-  // const addData=((a)=>setCat(a))
-  useEffect(()=>{
-    axios
-    .get("http://192.168.29.146:3000/api/photoAboutContent_api")
-    .then(res=>{
-     setHomeimg(res.data.result)
-     console.log(res.data.result)
-})
-    axios.get(url).then(res=>{
-      console.log(res.data.result)
-      setCat(res.data.result)
+  // const apiUrl='http://192.168.29.146:3000'
+ 
+  // useEffect(()=>{
+  //   axios.get(apiUrl +'/api/categoryAPI')
+  //   .then(res=>setCat(res.data.result))
+  //   console.log('ekhane ekhom home page chol6e'+ homeCat());
+  //   setCat(homeCat())
+  // },[])
+
+  const getCat = async ()=>{
+    try{
+      const cato= await homeCat() 
+      setCat(cato)
+      console.log(cat)
+    }catch(error){
+      console.log(error);
+    }
+  }
+  const getBackImg = async()=>{
+    try{
+      const bimg=await backgroundImg()
+      setHomeimg(bimg.slice(6))
+      console.log(bimg);
       
-    }).catch(err=>{
-      console.log(err)
-    })
+    }catch(error){
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    getBackImg()
+    getCat()
   },[])
-  // https://192.168.29.146:3000/api/vendorData
+ 
   return (
     <>
       <div>
-        <Bacimg img={`${process.env.REACT_APP_LOCALHOST_KEY}`}/>
+        <Bacimg img={`http://192.168.29.146:3000/${homeImg}`}/>
       </div>
       <div className="homediv">
         <Uprnav set={setOpenmod} conset={setContribut} />

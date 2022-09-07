@@ -17,6 +17,7 @@ const Slide = (props) => {
     item.status===true
   })
   
+  
 
   //Slide click
   const slide = (shift) => {
